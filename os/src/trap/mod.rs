@@ -1,5 +1,4 @@
 use core::arch::global_asm;
-use riscv::register::stvec::{self, TrapMode};
 
 mod context;
 
