@@ -3,7 +3,7 @@
     .section .data
     .global _num_app
 _num_app:
-    .quad 3
+    .quad 4
 
     .quad app_0_start
 
@@ -11,7 +11,9 @@ _num_app:
 
     .quad app_2_start
 
-    .quad app_2_end
+    .quad app_3_start
+
+    .quad app_3_end
 
     .section .data
     .global app_0_start
@@ -33,3 +35,10 @@ app_1_end:
 app_2_start:
     .incbin "../user/target/riscv64gc-unknown-none-elf/release/02power.bin"
 app_2_end:
+
+    .section .data
+    .global app_3_start
+    .global app_3_end
+app_3_start:
+    .incbin "../user/target/riscv64gc-unknown-none-elf/release/03my_hello.bin"
+app_3_end:
